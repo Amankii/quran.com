@@ -1,0 +1,551 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar
+{
+    display: none;
+    background: transparent;
+    color: transparent;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+body
+{
+    /*background-color: rgb(34, 34, 34);*/
+    background: linear-gradient( rgb(219, 205, 10), rgb(0, 255, 255), rgb(255, 0, 0), blue);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    color: white;
+}
+#man
+{
+    position: absolute;
+    right: 45px;
+    top: 100px;
+    border-radius: 50%;
+
+    z-index: 3;
+}
+#main-header
+{
+    width: 100%;
+    height: 550px;
+    background: url(./images/b3.jpg);
+    background-size: cover;
+    background-position: left bottom;
+    position: relative;
+
+    font-family: 'Alkatra', cursive;
+}
+nav
+{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 16px;
+}
+nav img
+{
+    position: fixed;
+    width: fit-content;
+    height: fit-content;
+    z-index: 5;
+}
+#home #menu
+{
+    position: fixed;
+    right: 5px;
+}
+#home #main-menu
+{
+    position: fixed;
+    transition: 0.5s;
+}
+nav ul
+{
+    position: fixed;
+    right: 5px;
+
+
+    z-index: 5;
+}
+nav ul li{
+    display: inline;
+    margin-right: 17px;
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: yellow 2px solid;
+
+
+    transition: 0.5s;
+
+}
+nav ul li:hover
+{
+    background-color: red;
+}
+nav ul li a
+{
+    color: white;
+    text-decoration: none;
+}
+.header-text
+{
+    position: absolute;
+    font-size: 35px;
+    top: 215px;
+    left: 150px;
+}
+.header-text h6{
+    color: rgb(158, 121, 0);
+}
+#menu
+{
+    display: none;
+}
+#xmark
+{
+    display: none;
+}
+
+#btn
+{
+    position: fixed;
+    left: 5px;
+    bottom: 6px;
+    margin: 35px 0;
+    z-index: 5;
+}
+#btn #parent
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 21px;
+    font-weight: 900;
+    text-align: center;
+    padding: 7.5px;
+    background-color: rgb(7, 7, 255);
+    color: aliceblue;
+    border: 5px blue groove;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+#btn #parent:hover
+{
+    transform: scale(1.2);
+    color: blue;
+    background-color: aliceblue;
+}
+#names
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2px);
+    width: 1300px;
+    height: 600px;
+    padding: 45px;
+    border: 2px solid #333;
+    border-radius: 15px;
+}
+#names li
+{
+    font-size: 13px;
+    padding-bottom: 15px;
+}
+#names li:hover
+{
+    color: red;
+}
+.fixed i
+{
+    position: absolute;
+    top: 10px;
+    right: 6px;
+    font-size: 25px;
+    transition: 0.5s;
+}
+#names i:hover
+{
+    color: red;
+    transform: scale(1.2);
+}
+#names li a
+{
+    color: #1d1d1d;
+    font-weight: 600;
+    text-decoration: none;
+    
+    margin: 1px;
+}
+#names li a:hover
+{
+    color: red;
+}
+.fixed i
+{
+    color: #000;
+}
+.fixed
+{
+    position: fixed;
+    top: 36px;
+    left: -1300px;
+
+    transition: 0.5s;
+    z-index: 20;
+}
+#surah
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    justify-items: center;
+    padding: 100px;
+    gap: 20px;
+}
+#surah .child
+{
+    width: 300px;
+    height: 350px;
+    margin: 25px 0;
+    background: url(./images/s2.jpg);
+    background-size: cover;
+    border-radius: 25px;
+    position: relative;
+
+    box-shadow: 8.4px 7px 30px 0px rgba(0, 0, 0, 0.6);
+}
+#surah .child:nth-child(even)
+{
+    background: url(./images/s4.jpg);
+    background-size: cover;
+}
+#surah .child:nth-child(odd)
+{
+    background: url(./images/s5.jpg);
+    background-size: cover;
+}
+#surah .child h3
+{
+    background: rgba(34, 34, 34, 0.5);
+    text-align: center;
+    padding: 7px;
+    border-top-right-radius: 23px;
+    border-top-left-radius: 23px;
+    border-bottom-style:double;
+}
+#surah .child h2
+{
+    background:rgba(rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), 0.5);
+    backdrop-filter: blur(2px);
+    box-shadow: 0 0 153px #333;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    color: #333;
+    position: absolute;
+    top: 70px;
+    width: fit-content;
+    opacity: 0;
+    transition: 0.5s;
+}
+#surah .child h2:hover
+{
+    opacity: 1;
+}
+#surah .child #player
+{
+    position: absolute;
+    bottom: 0;
+}
+
+/*--- contact -------*/
+
+#contact
+{
+    position: relative;
+    z-index: 7;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+
+    display: flex;
+    background-color: #333;
+    padding: 20px;
+
+}
+#contact .contact1
+{
+    flex-basis: 40%;
+    padding: 10px;
+}
+#contact .contact1 h2
+{
+    padding-bottom: 4px;
+}
+#contact .contact1 h6
+{
+    padding-bottom: 4px;
+}
+#contact .contact1 p
+{
+    padding-bottom: 4px;
+}
+#contact form
+{
+    flex-basis: 60%;
+    padding: 10px;
+}
+#contact form input
+{
+    display: block;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 4px 5px;
+    margin-bottom: 5px;
+}
+#contact form .btn
+{
+    display: block;
+    font-size: 17px;
+    font-weight: 700;
+    text-align: center;
+}
+footer
+{
+    position: relative;
+    z-index: 7;
+    background-color: #333;
+    text-align: center;
+    font-size: small;
+    padding: 15px;
+}
+footer a
+{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(255, 187, 0);
+
+    animation-name: topp;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes topp {
+    0%{
+        bottom: 10px;
+    }
+    50%{
+        bottom: 30px;
+    }
+    100%{
+        bottom: 10px;
+    }
+}
+hr
+{
+    position: relative;
+    z-index: 7;
+}
+footer p img
+{
+    width: 20px;
+    aspect-ratio: 1/1;
+    transform: translateY(7px);
+}
+
+
+@media only screen and (max-width:600px) {
+    #main-header
+    {
+        width: 100%;
+        height: 500px;
+        background: url(./images/b3.jpg);
+        background-size: cover;
+        background-position: right center;
+        position: relative;
+    }
+    .header-text
+    {
+        position: absolute;
+        font-size: 25px;
+        top: 130px;
+        right: 80px;
+    }
+    nav
+    {
+        position: relative;
+    }
+    nav img
+    {
+        width: 110px;
+        height: fit-content;
+    }
+    nav ul
+    {
+        position: absolute;
+        display: none;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        background-color: #333;
+        padding-top: 40px;
+        padding-right: 50px ;
+        padding-left: 30px;
+        z-index: 3;
+    }
+    nav ul li 
+    {
+        display: block;
+        font-size: 20px;
+        margin-bottom: 8px;
+        border: none;
+    }
+    #xmark
+    {
+        position: absolute;
+        display: block;
+        top: 7px;
+        right: 7px;
+        font-size: 25px;
+        transition: 0.5s;
+    }
+    #xmark:hover
+    {
+        color: red;
+    }
+    #menu
+    {
+        display: block;
+    }
+
+
+    #surah
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        justify-items: center;
+        padding: 50px;
+        gap: 5px;
+    }
+    #surah .child
+    {
+        width: 250px;
+        height: 250px;
+        margin: 15px 0;
+        background: url(./images/s2.jfif);
+        background-size: cover;
+        position: relative;
+    }
+    #surah .child h2
+    {
+        text-align: center;
+        position: absolute;
+        top: 35px;
+    }
+    #surah .child #player
+    {
+        position: absolute;
+        bottom: 0;
+        width: 250px;
+    }
+    .fixed
+    {
+        top: 25px;
+        left: -1300px;
+
+        transition: 0.5s;
+        z-index: 20;
+    }
+    #names
+    {
+        gap: 35px;
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(2px);
+        width: 300px;
+        height: 500px;
+        padding: 35px;
+        border: 2px solid #333;
+        border-radius: 15px;
+
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: horizontal;
+    
+        overflow: scroll;
+    }
+    #names::-webkit-scrollbar-corner
+    {
+        background: transparent;
+    }
+    #names::-webkit-scrollbar-thumb
+    {
+        width: 2px;
+        background-color: #616161;
+        border-radius: 25px;
+    }
+    #names::-webkit-scrollbar
+    {
+        background-color: transparent;
+    }
+    #names li
+    {
+        font-size: 16px;
+        padding-bottom: 8px;
+        padding-right: 10px;
+        margin: 2px;
+    }
+    .fixed i
+    {
+        position: absolute;
+        top: 10px;
+        right: 6px;
+        font-size: 25px;
+        transition: 0.5s;
+
+        z-index: 6;
+    }
+    #contact
+    {
+        display: block;
+    }
+    #contact .contact1
+    {
+        display: block;
+        font-size: 16px;
+    }
+    #contact form
+    {
+        display: block;
+        text-align: center;
+    }
+    #man
+    {
+        position: absolute;
+        width: 185px;
+        aspect-ratio: 1/1;
+        right: 3px;
+        top: 300px;
+        border-radius: 50%;
+
+        z-index: 3;
+    }
+    footer a
+    {
+        font-size: 10px;
+    }
+};
